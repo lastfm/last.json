@@ -1,0 +1,22 @@
+Source: lastjson
+Priority: extra
+Maintainer: Sven Over <sven@last.fm>
+Build-Depends: debhelper (>= 8.0.0), cmake (>= 2.8), libboost-dev (>= 1.42)
+Standards-Version: 3.9.2
+Section: libs
+Homepage: https://github.com/lastfm/last.json
+#Vcs-Git: git://github.com/lastfm/last.json
+#Vcs-Browser: https://github.com/lastfm/last.json
+
+Package: liblastjson-dev
+Section: libdevel
+Architecture: all
+Depends: libboost-dev (>= 1.42)
+Description: C++ JSON parser and formatter template library
+ At last, JSON in C++ the way it should be. This is an include-only template
+ library that defines of a lightweight JSON value type, that stores simple
+ types (bool, number, null) in place, and complex types (string, array,
+ object) via reference counting pointers. The JSON parser component turns
+ JSON strings into such objects. The JSON formatter component can turn both
+ JSON values and a range of native C++ types into valid JSON.
+

@@ -1,0 +1,19 @@
+*~
+
+# File automatically created by CMake
+/test/Makefile
+/test/CMakeFiles
+/test/CMakeCache.txt
+/test/cmake_install.cmake
+/test/lastjson-test
+
+/debian/*
+!/debian/source
+!/debian/changelog
+!/debian/compat
+!/debian/copyright
+!/debian/control
+!/debian/rules
+!/debian/docs
+!/debian/liblastjson-dev.install
+!/debian/liblastjson-dev.dirs
