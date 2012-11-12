@@ -1,3 +1,9 @@
+lastjson (0.9.1) stable; urgency=low
+
+  * Turned this package into a native Debian package.
+
+ -- Sven Over <sven@last.fm>  Mon, 12 Nov 2012 17:07:05 +0000
+
 lastjson (0.9.0-1) unstable; urgency=low
 
   * Initial release
