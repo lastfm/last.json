@@ -23,7 +23,13 @@ THE SOFTWARE.
 #ifndef LASTJSON_PARSER_HPP__
 #define LASTJSON_PARSER_HPP__
 
-#include <boost/lexical_cast.hpp>
+#ifdef LASTJSON_CXX11
+# include <string>
+#else
+# include <boost/lexical_cast.hpp>
+# define stoll(x) boost::lexical_cast<value::int_type>(x)
+# define stod(x) boost::lexical_cast<value::float_type>(x)
+#endif
 
 #include "value.hpp"
 #include "stringrep.hpp"
@@ -285,7 +291,7 @@ inline value parse_fragment(std::string::iterator & it, std::string::iterator en
                 }
             }
 
-            return value(sign * boost::lexical_cast<value::float_type>(std::string(digits_begin, it)));
+            return value(sign * stod(std::string(digits_begin, it)));
         }
         else
         {
@@ -294,7 +300,7 @@ inline value parse_fragment(std::string::iterator & it, std::string::iterator en
                 throw parser_error("invalid json data");
             }
 
-            return value(sign * boost::lexical_cast<value::int_type>(std::string(digits_begin, it)));
+            return value(sign * stoll(std::string(digits_begin, it)));
         }
     }
     default:

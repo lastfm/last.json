@@ -1,6 +1,5 @@
 TODO
 ====
 
-* Replace boost::lexical_cast with something else, so that last.json does not depend on Boost when C++11 libraries are available.
 * Serialising a lastjson::value to a stream uses the std::dec manipulator on the stream and therefore has a side effect on the stream. This should be avoided.
 * Add test cases - specifically destructive test cases, where lastjson must throw correctly.
